@@ -1,0 +1,103 @@
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(15, 15, 15);
+    color: #fff;
+    padding: 1rem 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top button{
+    width: 7rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    padding: .8rem;
+    background: rgb(44, 44, 44);
+    color: #fff;
+    border: .2rem solid rgb(26, 26, 26);
+    border-radius: 1rem;
+}
+.top button:hover{
+    background: rgb(27, 27, 27);
+    border: .2rem solid rgb(12, 12, 12);
+}
+.heading-big{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 4.5rem;
+    letter-spacing: .2rem;
+}
+.heading-small{
+    margin-top: .5rem;
+    padding-left: 9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    font-size: 1.4rem;
+}
+.filter{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    position: relative;
+    background: rgb(27, 27, 27);
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    height: max-content;
+    width: 100%;
+    padding: 1rem 9rem 1rem 1rem;
+    border-radius: 1rem;
+}
+.filter select{
+    font-size: 1.3rem;
+    padding: .8rem;
+    background: rgb(44, 44, 44);
+    color: #fff;
+    border: .2rem solid rgb(26, 26, 26);
+    border-radius: 1rem;
+}
+.filter select:hover{
+    background: rgb(27, 27, 27);
+    border: .2rem solid rgb(12, 12, 12);
+}
+.icon{
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font-size: 1.9rem;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgb(19, 19, 19);
+}
+.icon:hover{
+    background: rgb(19, 19, 19);
+}
+.list-group{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 701px){
+    .heading-big{
+        font-size: 5.5rem;
+    }
+}
+@media screen and (min-width: 1205px){
+    .heading-big{
+        font-size: 7.5rem;
+    }
+}
