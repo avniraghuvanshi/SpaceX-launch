@@ -1,5 +1,5 @@
 .home{
-    width: 100%;
+    max-width: 100vw;
     min-height: 100vh;
     background: rgb(15, 15, 15);
     color: #fff;
@@ -8,7 +8,8 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    align-items: center;
+    /* align-items: center; */
+    overflow-x: hidden;
 }
 .top{
     width: 100%;
@@ -96,8 +97,35 @@
         font-size: 5.5rem;
     }
 }
-@media screen and (min-width: 1205px){
+@media screen and (min-width: 1005px){
     .heading-big{
         font-size: 7.5rem;
+    }
+    .filter{
+        width: 20rem;
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        top: 16.5rem;
+        left: 3rem;
+        z-index: 100;
+        padding: 1rem;
+        border-radius: 3rem;
+    }
+    .list-group{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .icon{
+        display: none;
+    }
+    .top button{
+        display: none;
+        visibility: hidden;
     }
 }
