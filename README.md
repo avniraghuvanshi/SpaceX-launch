@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# SpaceX Launch Program
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-This is a front-end application to let users list and browse all launches by SpaceX program.\
+-User can filter the results with help of provided filters.\
+-Applied filters changes the URL and update the page with latest records without refreshing the page using react-router-dom.
 
-## Available Scripts
+## Live Application URL
 
-In the project directory, you can run:
+https://spacex-launch23.netlify.app
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To install, simply clone this repository & run the following command `yarn` or `npm install`, this will install all the dependencies for you.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+This is the initial page showing the launch data fetched from the spacex api.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![default.png](https://i.postimg.cc/15NyhXKq/default.png)](https://postimg.cc/1fPkD92m)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+After applying launch-year filter
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[![filter1.png](https://i.postimg.cc/bvqPtTfx/filter1.png)](https://postimg.cc/219gpn6y)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+After applying launch-success and land-success filters
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[![filter2.png](https://i.postimg.cc/RZ79hYyC/filter2.png)](https://postimg.cc/nXhNw3nN)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Tablet-view
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[![tablet.png](https://i.postimg.cc/2jLnJdgF/tablet.png)](https://postimg.cc/23mqLWkV)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mobile-view
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![mobile.png](https://i.postimg.cc/nLLD1qvm/mobile.png)](https://postimg.cc/k2kGJ6YM)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Filter modal in small screens
 
-### Analyzing the Bundle Size
+[![mobile-filter.png](https://i.postimg.cc/bYn2Ly2m/mobile-filter.png)](https://postimg.cc/mhbDgGj9)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Lighthouse Test Report
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![lighthouse.png](https://i.postimg.cc/3x5YKhLb/lighthouse.png)](https://postimg.cc/8jHqH2gh)
