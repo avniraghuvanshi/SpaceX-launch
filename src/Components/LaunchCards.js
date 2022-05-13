@@ -1,8 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import './LaunchCards.css';
 
-const LaunchCards = ({result}) =>{
-    const launch_cards = result[0];
+const LaunchCards = () =>{
+    const launch_cards = useSelector(state => state.launchSlice.launches); //---GETTINg THE STATE VALUE---//
+
+    console.log(launch_cards);
     const cards = launch_cards.map(card=>{
         const missionId = card.mission_id ? [...card.mission_id] : "-" ;
         const launchYear = card.launch_year ? card.launch_year : '-';

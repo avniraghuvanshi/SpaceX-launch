@@ -1,22 +1,28 @@
 import React,{useState , useEffect, useRef} from "react";
 import { useSearchParams } from "react-router-dom";
 import './Home.css';
+import { getLaunchesThunk } from "../store/reducer";
 import useSpaceX from "../useSpacex";
 import LaunchCards from "./LaunchCards";
+import { useDispatch , unWr } from "react-redux";
 
 let url = `https://api.spaceXdata.com/v3/launches?limit=100`;
 
 const Home = () =>{
-    const[searchParams , setSearchParams] = useSearchParams(); //initializing URLSearchParameter
+    const dispatch = useDispatch();
+    const[searchParams , setSearchParams] = useSearchParams(); //---initializing URLSearchParameter---//
 
     const [launchYear , setLaunchYear] = useState('');
     const [successfulLaunch , setSuccessfulLaunch] = useState('');
     const [successfulLand , setSuccessfulLand] = useState('');
-
     const filterEl = useRef();
-    const result = useSpaceX(`${url}&launch_year=${launchYear}&launch_success=${successfulLaunch}&land_success=${successfulLand}`); //calling the custom hook
+    
+    //---ANY CHANGE IN THE STATES WILL RUN THIS USEEFFECT WHICH WILL DISPATCH THE ASYNC-THUNK FUNCTION---//
+    useEffect(()=>{
+        dispatch(getLaunchesThunk(`${url}&launch_year=${launchYear}&launch_success=${successfulLaunch}&land_success=${successfulLand}`));
+    }, [launchYear],[successfulLand],[successfulLaunch])
 
-    let optionYear = []; //pushing the list of launch years in the array programatically
+    let optionYear = []; //---pushing the list of launch years in the array programatically---//
     for(let i=2006 ; i<=2020 ; i++){
         optionYear.push(i);
     }
@@ -30,7 +36,6 @@ const Home = () =>{
                 </div>
                 <button onClick={()=>{filterEl.current.style.display = "flex"}}>Filter</button>
             </section>
-            {/* filter modal */}
             <section ref={filterEl} className="filter">
                 <span className="icon material-symbols-outlined" onClick={()=>{filterEl.current.style.display = "none"}}>close</span>
                 <div className="list-group">
@@ -73,7 +78,7 @@ const Home = () =>{
                     </select>
                 </div>
             </section>
-            <LaunchCards result={[result]}/>
+            <LaunchCards/>
         </section>
     );
 }
